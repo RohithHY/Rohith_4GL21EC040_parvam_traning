@@ -1,0 +1,50 @@
+{%extends 'teacher_crud/menu.html'%}
+
+{% block content %}
+<h1 class="bg-info text-center">View Teacher Information</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Attribute</th>
+        <th scope="col">Value</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <div class="container mt-5">
+        <h2 class="mb-4">Student Details</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Name</th>
+                <td>{{ teacher.name }}</td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>{{ teacher.age }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ teacher.email }}</td>
+            </tr>
+            <tr>
+                <th>Phone number</th>
+                <td>{{ teacher.phone }}</td>
+            </tr>
+            <tr>
+                <th>Qualification</th>
+                <td>{{ teacher.qualification }}</td>
+            </tr>
+            <tr>
+                <th>Subject</th>
+                <td>{{ teacher.subject }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ teacher.experience }}</td>
+            </tr>
+        </table>
+        <a href="{% url 'teacher_list' %}" class="btn btn-secondary mt-3">Back</a>
+    </div>
+    </tbody>
+  </table>
+{%endblock%}
